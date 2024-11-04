@@ -1,4 +1,6 @@
 // FAQ Accordion
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const faqContainer = document.querySelector('.faq-content');
 
@@ -35,11 +37,31 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const hamburgerButton = document.querySelector('.hamburger-button');
   const mobileMenu = document.querySelector('.mobile-menu');
 
+  const links = document.querySelectorAll('.mobile-menu ul li a');
+  links.forEach((e)=> {
+    e.addEventListener('click', ()=> {
+      mobileMenu.classList.toggle('active')
+    })
+  })
+
+
+ 
+
   hamburgerButton.addEventListener('click', () =>
     mobileMenu.classList.toggle('active')
   );
+
+  
+});
+
+
+
+Fancybox.bind('[data-fancybox]', {
+  // Custom options for all galleries
 });

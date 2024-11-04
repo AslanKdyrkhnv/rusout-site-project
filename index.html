@@ -17,6 +17,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" href="images/final_logo.png" type="image/x-icon" />
   </head>
@@ -32,13 +37,13 @@
         <div class="main-menu">
           <ul>
             <li>
-              <a href="index.html">Услуги</a>
+              <a href="#offer">Услуги</a>
             </li>
             <li>
-              <a href="#">О нас</a>
+              <a href="#about">О нас</a>
             </li>
             <li>
-              <a href="#">Контакты</a>
+              <a href="#footer">Контакты</a>
             </li>
             <li>
               <a href="#" class="btn btn-primary">
@@ -46,7 +51,8 @@
                 +7(929) 638-60-48 </a>
             </li>
             <li>
-              <a href="#" class="btn btn-primary">Оставить заявку</a>
+              <a href="#" class="btn btn-primary"
+              data-fancybox data-src="#dialog-content">Оставить заявку</a>
             </li>
           </ul>
         </div>
@@ -59,13 +65,13 @@
         <div class="mobile-menu">
           <ul>
             <li>
-              <a href="index.html">Услуги</a>
+              <a href="#offer">Услуги</a>
             </li>
             <li>
-              <a href="#">О нас</a>
+              <a href="#about">О нас</a>
             </li>
             <li>
-              <a href="#">Контакты</a>
+              <a href="#footer">Контакты</a>
             </li>
             <li>
               
@@ -74,7 +80,9 @@
                 +7(929) 638-60-48 </a>
             </li>
             <li>
-              <a href="#" class="btn btn-primary">Оставить заявку</a>
+              <a href="#" class="btn btn-primary"
+              data-fancybox data-src="#dialog-content"
+              >Оставить заявку</a>
             </li>
           </ul>
         </div>
@@ -122,7 +130,7 @@
     </section>
      -->
      
-     <section class="about">
+     <section class="about" id="about">
       <div class="container">
         <div class="grid-2">
           <div class="item-imgs">
@@ -136,7 +144,8 @@
             <p class="text-sm">
               Rusout – эксперт в массовом и точечном рекрутинге, предоставлении персонала для складской, промышленной, офисной логистики, ритейла, производства, клининга и других направлений. Мы оказываем комплексные услуги аутсорсинга персонала более чем в 60 городах России, обеспечивая надёжное управление персоналом для вашего бизнеса.
             </p>
-            <a href="#" class="btn btn-primary">Оставить заявку</a>
+            <a href="#" class="btn btn-primary"
+            data-fancybox data-src="#dialog-content">Оставить заявку</a>
           </div>
         </div>
       </div>
@@ -302,7 +311,7 @@
   
 
     <!-- Pricing -->
-    <section class="pricing">
+    <section class="pricing" id="offer">
       <div class="container-sm">
         <h3 class="pricing-heading text-xl text-center">Мы решаем нестандартные задачи <br>
           <span class="bg-primary-color">любого масштаба и сложности</span>
@@ -322,7 +331,8 @@
               </p>
             </div>
             <div class="pricing-card-body margin-top">
-              <a href="#" class="btn btn-primary btn-block">Оставить заявку</a>
+              <a href="#" class="btn btn-primary btn-block"
+              data-fancybox data-src="#dialog-content">Оставить заявку</a>
             </div>
           </div>
 
@@ -338,7 +348,8 @@
               </p>
             </div>
             <div class="pricing-card-body margin-top">
-              <a href="#" class="btn btn-primary btn-block">Оставить заявку</a>
+              <a href="#" class="btn btn-primary btn-block"
+              data-fancybox data-src="#dialog-content">Оставить заявку</a>
             </div>
           </div>
 
@@ -355,7 +366,8 @@
               </p>
             </div>
             <div class="pricing-card-body margin-top">
-              <a href="#" class="btn btn-primary btn-block">Оставить заявку</a>
+              <a href="#" class="btn btn-primary btn-block"
+              data-fancybox data-src="#dialog-content">Оставить заявку</a>
             </div>
           </div>
 
@@ -369,28 +381,32 @@
    
 
     <!-- Footer -->
-    <footer class="footer bg-black">
+    <footer class="footer bg-black" id="footer">
       <div class="container">
         <div class="footer-grid">
           <div>
-            <div class="logo">
-              <a href="index.html" class="logo-style">
+            <div class="logo ">
+              <a href="index.html" class="logo-style center-logo">
                 <img src="images/final_logo.png" alt="logo" width="50"  /> <span>RUSOUT</span>
               </a>
             </div>
-            <div class="card">
+            <!-- <div class="card">
               <h4>Контакты</h4>
               <p class="text-sm">
                 Заполните форму заявки
 и наши менеджеры свяжутся с вами
               </p>
               <form>
+                <input type="name" id="name" placeholder="имя" />
+                <input type="tel" id="tel" placeholder="Номер телефона" />
                 <input type="email" id="email" placeholder="Введите свой адрес электронной почты" />
-                <button type="submit" class="btn btn-primary btn-block">
-                  Subscribe
-                </button>
+                <p>
+                  <button type="submit" class="btn btn-primary btn-block"
+                  >Отправить</button>
+                </p>
+                
               </form>
-            </div>
+            </div> -->
             <i class="fa-brands fa-telegram"></i>
             <i class="fa-brands fa-whatsapp"></i>
           </div>
@@ -414,6 +430,35 @@
       </div>
     </footer>
 
+
+    <div id="dialog-content" style="display:none;max-width:500px;">
+      <!-- <div class="container">   -->
+        <form id="contact" action="" method="post">
+          <h3 >Контакты</h3>
+          <h4 >Заполните форму заявки
+            и наши менеджеры свяжутся с вами</h4>
+          <fieldset>
+            <input placeholder="Ваше имя" type="text" tabindex="1" required autofocus>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Ваш адрес электронной почты" type="email" tabindex="2" required>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Ваш номер телефона" type="tel" tabindex="3" required>
+          </fieldset>
+          <fieldset>
+            <textarea placeholder="Введите свое сообщение здесь...." tabindex="4" required></textarea>
+          </fieldset>
+          <fieldset>
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Отправить</button>
+          </fieldset>
+          
+        </form>
+      <!-- </div> -->
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
