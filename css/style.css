@@ -126,14 +126,17 @@ body {
   padding-top: 100px;
   margin-bottom: 50px;
   position: relative;
-  height: 70vh;
+  height: 100vh;
+ 
+  
 }
 
 .hero::after {
   position: absolute;
-  background: url('../images/image.png') no-repeat;
+  background: url('../images/image-main.jpeg') no-repeat;
   background-size: cover; /* Растягивает изображение по всему контейнеру */
   background-position: center;
+  
   width: 100%;
   height: 60vh;
   top: 30%;
@@ -254,6 +257,7 @@ body {
 /* Basic Layout */
 .about {
   padding: 50px 0;
+  margin: 50px 0;
 }
 
 

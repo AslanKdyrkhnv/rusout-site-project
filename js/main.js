@@ -62,6 +62,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+
 Fancybox.bind('[data-fancybox]', {
   // Custom options for all galleries
 });
+
+
+// Email JS
+
+
+function sendMail() {
+  (function(){
+    emailjs.init(
+      "xDvENqCHqnvTXFfGl"
+    )
+  });
+
+  let serviceID = "service_dnkyml7"; 
+  let templateID = "template_m9z5mri";
+
+  let params = {
+    name: document.getElementById('name').value, 
+    email: document.getElementById('email').value, 
+    phone: document.getElementById('phone').value, 
+    message: document.getElementById('message').value,
+  }
+
+  emailjs.send(serviceID, templateID, params)
+  .then(res => {
+    alert('Заявка оставлена')
+  })
+  .catch();
+}
